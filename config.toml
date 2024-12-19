@@ -1,0 +1,45 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "bar"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.whitespace]
+render = { newline = "none", space = "all", tab = "all" }
+
+[editor.whitespace.characters]
+space = "·"
+tab = "→"
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 1
+
+[keys.normal]
+"C-f" = ":format"
+"C-r" = "rename_symbol"
